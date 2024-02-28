@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         aadhaarButton.setTitle("Anon Aadhaar", for: .normal)
         aadhaarButton.addTarget(self, action: #selector(openAnonAadhaar), for: .touchUpInside)
         
-        aadhaarNewButton.setTitle("Anon Aadhaar New", for: .normal)
+        aadhaarNewButton.setTitle("Proof of Passport", for: .normal)
         aadhaarNewButton.addTarget(self, action: #selector(openAnonAadhaarNew), for: .touchUpInside)
         
         complexNewButton.setTitle("Complex Test", for: .normal)

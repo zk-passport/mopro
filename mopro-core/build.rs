@@ -133,7 +133,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     name = "keccak256_256_test"
     
                     #[dylib]
-                    use_dlib = false
+                    use_dylib = false
                     #name = "keccak256.dylib"
                 "#;
             default_config.to_string()
@@ -141,6 +141,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     };
 
     let config: Config = toml::from_str(&config_str)?;
+
+    println!("cargo:warning=Configurations Loaded:");
+    println!("cargo:warning=Circuit Name: {:?}", config_str);
 
     // Build circuit
     build_circuit(&config)?;
